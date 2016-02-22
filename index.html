@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width"> don't think I need this jsbin -->
+  <title>JS Bin</title>
+</head>
+<body ng-app=''>
+  <div>
+    <input type="text" ng-model="adjective" placeholder="adjective">
+    <input type="text" ng-model="noun" placeholder="noun">
+   <input type="text" ng-model="newadjective" placeholder="adjective">
+   
+   
+    
+    
+    <p>I found some {{adjective || '______'}} {{noun || '_____'}} and it/they is/are so {{newadjective || '______'}}! 
+    </p>
+    
+ 
+  
+  
+     <p>If I sell
+      <input type="number" ng-model="input"> 
+      <div ng-init="charge=5">
+          of the {{noun}} that I found for ${{charge}} each, I will make $ 
+          <span ng-bind="input * charge"></span>
+        </p>
+     
+     </div>
+   
+ 
+
+    <p>Have you heard of this neat band called Walk the Earth? you should check them out. Some info for about the band can be fornd below.</p>
+
+     <div ng-init="bandName=[{name: 'Gianni Nicassio ', instruments: ['base', 'guitar', 'uke', 'banjo','drums', 'vocals','glockenspiel','piano','cajon', 'cello', 'bongos', 'harmonica', 'double bass', 'percussion', 'kazoo', 'keyboards', 'beatbox', 'kalimba'] },
+
+     {name: 'Sara Blackwood', instruments: ['base', 'guitar', 'uke', 'vocals','glockenspiel','piano', 'harmonica', 'percussion', 'kazoo', 'mandolin'] }, 
+
+     {name: 'Ryan Marshall', instruments: ['guitar', 'bas', 'trumpet', 'harmonica', 'vocals', 'ukulele', 'piano', 'glockenspiel', 'melodica', 'percussion', 'kazoo', 'bongos'] }, 
+
+     {name: 'Mike Taylor', instruments: [ 'piano', 'keyboards', 'organ', 'vocals', 'xylophone', 'glockenspiel', 'trumpet', 'melodica', 'didgeridoo', 'accordion', 'kazoo', 'euphonium', 'slide whistle'] },
+
+     {name: 'Joel Cassady ', instruments: [ 'drums', 'cajon', 'bongos', 'congas', 'percussion', 'vocals', 'bass', 'organ', 'piano', 'spoons', 'ukulele', 'guitar', 'kalimba'] },
+
+     ]">
+  
+  <div ng-repeat="player in bandName">
+    <h2>{{player.name}} is a member of Walk the Earth</h2>
+    <h3>They played these instruments: </h3>
+    <ul>
+      <li ng-repeat="instrument in player.instruments">{{instrument}}</li>
+  
+  </div>
+
+
+
+<script src="lib/angular.min.js"></script>
+</body>
+</html>
